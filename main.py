@@ -8,6 +8,15 @@ def read_root():
     return {"message": "FastAPI is working!"}
 
 
-@app.post("/register")
-def register():
-    return {"register"}
+students = {
+    1: {
+        "name": "John",
+        "age": 17,
+        "class": "Year 12"
+    }
+}
+
+
+@app.get("/get_student/{student_id}")
+def get_student(student_id: int):
+    return students[student_id]

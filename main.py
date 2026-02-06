@@ -22,10 +22,9 @@ def get_student(student_id: int = Path(..., description="Enter the ID of the stu
     return students[student_id]
 
 
-@app.get("/get_by_name")
-def get_student(*, name: Optional[str] = None, age: int):
+@app.get("/get_by_name/{student_id}")
+def get_student(*, student_id: int, name: Optional[str] = None, age: int):
     for student_id in students:
         if students[student_id]["name"] == name:
             return students[student_id]
     return {"Data": "Not found"}
-# query parameter

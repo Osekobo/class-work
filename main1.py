@@ -13,9 +13,10 @@ def read_root():
 students = {
     1: {"name": "John", "age": 17, "year": "Year 12"},
     2: {"name": "Amina", "age": 19, "year": "Year 11"},
+    3: {"name": "Peter", "age": 18, "year": "Year 10"},
 }
 
-
+# pip install -r .\requirements.txt
 class Student(BaseModel):
     name: str
     age: int

@@ -18,7 +18,7 @@ const AddFruitForm = ({ addFruit }) => {
         value={fruitName}
         onChange={(e) => setFruitName(e.target.value)}
         placeholder="Enter fruit name"
-      />
+      /><br /><br />
       <button type="submit">Add Fruit</button>
     </form>
   );
